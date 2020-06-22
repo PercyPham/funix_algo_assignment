@@ -13,6 +13,14 @@ public class DoublyLinkedList<T extends Comparable<T>> {
         return true;
     }
 
+    public void add(DoublyLinkedList<T> list) {
+        Node<T> node = list.getHead();
+        while(node != null) {
+            add(node.getData());
+            node = node.next();
+        }
+    }
+
     public void addFirst(T data) {
         Node<T> node = new Node<>(data);
 

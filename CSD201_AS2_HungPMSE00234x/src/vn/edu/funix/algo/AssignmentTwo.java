@@ -52,7 +52,7 @@ public class AssignmentTwo {
         switch (choice) {
             case 1:
                 // Load data from file and display
-                products = loadFromFile();
+                products.add(loadProductsFromFile());
                 Product.printProducts(products);
                 break;
             case 2:
@@ -141,7 +141,7 @@ public class AssignmentTwo {
         System.out.println("Successfully!");
     }
 
-    private static DoublyLinkedList<Product> loadFromFile() {
+    private static DoublyLinkedList<Product> loadProductsFromFile() {
         DoublyLinkedList<Product> products = new DoublyLinkedList<>();
         String content = FileUtil.readFromFile(DATA_FILE);
 
@@ -225,11 +225,11 @@ public class AssignmentTwo {
     }
 
     private static void loadToStackAndDisplay() {
-        DoublyLinkedList<Product> products = loadFromFile();
+        DoublyLinkedList<Product> products = loadProductsFromFile();
         Stack stack = new Stack();
 
         Node<Product> node = products.getHead();
-        while(node != null ) {
+        while (node != null) {
             stack.push(node.getData());
             node = node.next();
         }
@@ -238,11 +238,11 @@ public class AssignmentTwo {
     }
 
     private static void loadToQueueAndDisplay() {
-        DoublyLinkedList<Product> products = loadFromFile();
+        DoublyLinkedList<Product> products = loadProductsFromFile();
         CircularQueue queue = new CircularQueue(products.size());
 
         Node<Product> node = products.getHead();
-        while(node != null ) {
+        while (node != null) {
             queue.enqueue(node.getData());
             node = node.next();
         }
