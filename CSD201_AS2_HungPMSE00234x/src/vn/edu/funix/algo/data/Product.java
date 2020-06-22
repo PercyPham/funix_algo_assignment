@@ -124,7 +124,7 @@ class ProductPrinter {
         String quantity = Integer.toString(product.getQuantity());
         String price = Double.toString(product.getPrice());
 
-        String s = fmt(product.getId(), idMaxLen) +
+        String s = fmt(id, idMaxLen) +
                 " | " + fmt(name, nameMaxLen) +
                 " | " + fmt(quantity, quanMaxLen) +
                 " | " + fmt(price, priceMaxLen);

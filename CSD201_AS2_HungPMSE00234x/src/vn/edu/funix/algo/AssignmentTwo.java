@@ -169,7 +169,7 @@ public class AssignmentTwo {
 
         Product found = findProductById(id);
         if (found == null) {
-            System.out.println("Not found");
+            System.out.println(-1);
             return;
         }
 
@@ -213,9 +213,8 @@ public class AssignmentTwo {
 
     private static void handleConvertProductsNumToBinary() {
         int size = products.size();
-        String result = "";
-        result = toBinary(size);
-        System.out.println("Quantity=" + size + "=>(" + result + ")");
+        String sizeBinary = toBinary(size);
+        System.out.println("Quantity=" + size + "=>(" + sizeBinary + ")");
     }
 
     private static String toBinary(int i) {
