@@ -1,0 +1,9 @@
+# compiled codes
+out/
+
+# output files
+INPUT.TXT
+OUTPUT1.TXT
+OUTPUT2.TXT
+OUTPUT3.TXT
+OUTPUT4.TXT
