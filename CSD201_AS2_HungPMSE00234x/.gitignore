@@ -1,0 +1,5 @@
+# compiled codes
+out/
+
+# output data file
+data.txt
