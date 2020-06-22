@@ -18,10 +18,9 @@ public class AssignmentOne {
     private static final String FOUND_INDEXES_OUTPUT_FILE = "OUTPUT4.TXT";
 
     public static void exec(String[] args) {
-        int choice = -1;
-        while (choice != 0) {
+        while (true) {
             printMenu();
-            choice = getChoiceFromInput();
+            int choice = getChoiceFromInput();
             dealWith(choice);
         }
     }
@@ -72,7 +71,7 @@ public class AssignmentOne {
                 break;
             case 0:
                 System.out.println("Thanks!!!");
-                break;
+                System.exit(0);
             default:
                 System.out.println("Choose again");
                 break;
