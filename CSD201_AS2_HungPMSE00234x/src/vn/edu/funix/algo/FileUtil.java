@@ -29,7 +29,7 @@ public class FileUtil {
         try {
             Scanner reader = new Scanner(new File(fileName));
             while (reader.hasNextLine())
-                content += reader.nextLine();
+                content += reader.nextLine() + "\n";
             reader.close();
         } catch (Exception e) {
             e.printStackTrace();
