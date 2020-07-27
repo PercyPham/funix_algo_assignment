@@ -76,7 +76,7 @@ public class AssignmentThree {
                 break;
             case 8:
                 // Dijkstra
-                // TODO
+                execDijkstraSearch();
                 break;
             case 0:
                 // Exit
@@ -153,6 +153,14 @@ public class AssignmentThree {
     private static void dfsGraph() {
         Graph graph = Graph.loadFromFile("Matran.txt");
         System.out.println("DFS_Graph: " + graph.depthFirstSearchTraverse().join(""));
+    }
+
+    private static void execDijkstraSearch() {
+        Graph graph = Graph.loadFromFile("Matran.txt");
+
+        graph.printWeightedMatrix();
+
+        graph.dijkstra('A', 'E');
     }
 
 }
