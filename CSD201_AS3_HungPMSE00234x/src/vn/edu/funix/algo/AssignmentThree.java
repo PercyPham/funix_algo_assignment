@@ -1,7 +1,7 @@
 package vn.edu.funix.algo;
 
 import vn.edu.funix.algo.data.BinarySearchTree;
-import vn.edu.funix.algo.data.DoublyLinkedList;
+import vn.edu.funix.algo.data.Graph;
 import vn.edu.funix.algo.data.Traverser;
 
 import java.util.Scanner;
@@ -72,7 +72,7 @@ public class AssignmentThree {
                 break;
             case 7:
                 // DFS_Graph
-                // TODO
+                dfsGraph();
                 break;
             case 8:
                 // Dijkstra
@@ -148,6 +148,11 @@ public class AssignmentThree {
 
     private static void balanceCurrentBTS() {
         bts = bts.balance();
+    }
+
+    private static void dfsGraph() {
+        Graph graph = Graph.loadFromFile("Matran.txt");
+        System.out.println(graph.depthFirstSearchTraverse());
     }
 
 }

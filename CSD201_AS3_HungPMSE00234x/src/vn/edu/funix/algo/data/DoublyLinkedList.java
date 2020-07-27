@@ -153,7 +153,7 @@ public class DoublyLinkedList<T> {
         if (size == 0) return null;
         T data = tail.getData();
         tail = tail.previous();
-        tail.setNext(null);
+        if (tail != null) tail.setNext(null);
         size--;
         return data;
     }
