@@ -1,6 +1,6 @@
 # HungPMSE00234x
 
-All the code related to data structure or algorithm is copied from below repo (also written by me):
+All the code related to data structure or algorithm is copied from below repo (also is written by me - while learning on Udemy):
 
 ```
 https://github.com/PercyPham/AlgoFunix
