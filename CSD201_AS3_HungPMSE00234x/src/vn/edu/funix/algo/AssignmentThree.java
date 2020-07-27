@@ -152,7 +152,7 @@ public class AssignmentThree {
 
     private static void dfsGraph() {
         Graph graph = Graph.loadFromFile("Matran.txt");
-        System.out.println(graph.depthFirstSearchTraverse());
+        System.out.println("DFS_Graph: " + graph.depthFirstSearchTraverse().join(""));
     }
 
 }

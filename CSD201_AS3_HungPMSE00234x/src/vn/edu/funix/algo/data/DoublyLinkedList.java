@@ -191,6 +191,20 @@ public class DoublyLinkedList<T> {
         return s;
     }
 
+    public String join(String separator) {
+        if (size == 0) return "";
+
+        String s = head.getData().toString();
+
+        Node node = head.next();
+        while (node != null) {
+            s += separator + node.getData().toString();
+            node = node.next();
+        }
+
+        return s;
+    }
+
 }
 
 class Node<T> {

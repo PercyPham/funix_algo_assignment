@@ -29,7 +29,7 @@ public class Graph {
         return new Graph(edges);
     }
 
-    public String depthFirstSearchTraverse() {
+    public DoublyLinkedList<String> depthFirstSearchTraverse() {
         DoublyLinkedList<Integer> vertices = new DoublyLinkedList<>();
         Stack<Integer> stack = new Stack<>();
 
@@ -37,7 +37,7 @@ public class Graph {
 
         dfsTraverse(vertices, stack);
 
-        return convertVertexIntsToStrings(vertices).toString();
+        return convertVertexIntsToStrings(vertices);
     }
 
     private void dfsTraverse(DoublyLinkedList<Integer> vertices, Stack<Integer> stack) {
@@ -66,9 +66,5 @@ public class Graph {
             vertexStrings.add(Character.toString(ints.get(i) + 65));
         }
         return vertexStrings;
-    }
-
-    public int[][] getEdges() {
-        return edges;
     }
 }
